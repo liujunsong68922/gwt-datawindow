@@ -19,6 +19,7 @@
 
   <!-- Other module inherits                                      -->
  <inherits name='com.google.gwt.xml.XML'></inherits>	
+ <inherits name="com.google.gwt.json.JSON"/>
   <!-- Specify the app entry point class.                         -->
   <entry-point class='com.liu.webdw.client.DataWindowApp'/>
 

@@ -14,6 +14,7 @@ import com.liu.webdw.client.datawindow.model.viewmodel.WebDW_DynamicLabel;
 import com.liu.webdw.client.datawindow.model.viewmodel.WebDW_DynamicRadioButton;
 import com.liu.webdw.client.datawindow.model.viewmodel.WebDW_DynamicTextField;
 import com.liu.webdw.client.datawindow.model.viewmodel.panel.WebDW_AbsolutePanel;
+import com.liu.webdw.client.datawindow.view.model.CViewModel;
 
 public class CWebDWUI_ParentDW extends GolbalENV {
 	// syntax vo model,this is input
@@ -271,6 +272,15 @@ public class CWebDWUI_ParentDW extends GolbalENV {
 			iret = _DrawLabel(rowid);//
 			iret = _DrawColumn(rowid);//
 		}
+		
+		//step3. test new CViewModel function.
+		CViewModel vm = new CViewModel();
+		vm.generateVM(this.local_webdw(), webdwData);
+		
+		String s1 = vm.toJsonStrig(vm);
+		Window.alert(s1);
+		consoleLog(s1);
+		
 		return 0;
 	}
 
@@ -564,5 +574,6 @@ public class CWebDWUI_ParentDW extends GolbalENV {
 		}
 		return 0;
 	}
+
 
 }
