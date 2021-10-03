@@ -1,0 +1,2 @@
+serviceClass: com.liu.webdw.client.GreetingService
+path: EA9C8A5F1E7E9240B0B95FD951E533F4.gwt.rpc
